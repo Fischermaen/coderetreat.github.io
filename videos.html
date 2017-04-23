@@ -9,7 +9,14 @@ permalink: videos/
   <ul class="video-list">
   {% for video in site.data.videos %}
     <li class="video">
-      <iframe src="https://www.youtube.com/embed/{{ video.url }}" frameborder="0" allowfullscreen></iframe>
+      {% if video.youtube %}
+      <iframe src="https://www.youtube.com/embed/{{ video.youtube }}" frameborder="0" allowfullscreen></iframe>
+      {% endif %}
+
+      {% if video.vimeo %}
+      <iframe src="https://player.vimeo.com/video/{{video.vimeo}}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      {% endif %}
+      
       <div class="title">{{video.added}} by {{video.author}}</div>
     </li>
   {% endfor %}

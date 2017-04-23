@@ -38,14 +38,16 @@
 
   .video {
     margin: 10px;
-    padding: 5px;
+    padding-bottom: 5px;
     
     font-size: .8em;
     text-align: center;
 
     iframe { 
-      border: 5px solid $green;
+      border: 0px solid $green;
     }
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    // box-shadow: 5px 5px 5px $dark;
   }
 }
 
