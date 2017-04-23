@@ -1,0 +1,18 @@
+---
+layout: default
+permalink: videos/
+---
+
+<section class="videos">
+  <h1>Videos posted by the community</h1>
+
+  <ul class="video-list">
+  {% for video in site.data.videos %}
+    <li class="video">
+      <iframe src="https://www.youtube.com/embed/{{ video.url }}" frameborder="0" allowfullscreen></iframe>
+      <div class="title">{{video.added}} by {{video.author}}</div>
+    </li>
+  {% endfor %}
+  </ul>
+
+</section>
